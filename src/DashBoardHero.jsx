@@ -4,6 +4,7 @@ import DashBoardAside from "./components/DashBoardAside";
 import DashBoardNavBar from "./components/DashBoardNavBar";
 
 const DashBoardHero = () => {
+    console.log(`Token ${window.sessionStorage.getItem("token")}`)
     useEffect(() => {
         fetch("https://hazem1portfolio.pythonanywhere.com/hero/", {
             headers: {
