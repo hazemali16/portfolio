@@ -11,7 +11,7 @@ const Login = () => {
             e.preventDefault()
             let username = e.target.children[0].children[1].value
             let password = e.target.children[1].children[1].value
-            fetch("http://127.0.0.1:8000/", {
+            fetch("https://hazem1portfolio.pythonanywhere.com/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password }),
