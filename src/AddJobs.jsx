@@ -10,7 +10,7 @@ const AddJobs = () => {
 
     useEffect(() => {
         if (params.jobId) {
-            fetch(`http://127.0.0.1:8000/jobs/${params.jobId}`,
+            fetch(`https://hazem1portfolio.pythonanywhere.com/jobs/${params.jobId}`,
             {headers : {"Authorization" : `Token ${window.sessionStorage.getItem("token")}`},}
         )
             .then((response) => response.json())
@@ -52,7 +52,7 @@ const AddJobs = () => {
                                                 body: formdata,
                                                 redirect: "follow",
                                             };
-                                            fetch("http://127.0.0.1:8000/jobs/", requestOptions)
+                                            fetch("https://hazem1portfolio.pythonanywhere.com/jobs/", requestOptions)
                                             .then((response) => response.text())
                                             .then((result) => console.log(result))
                                             .catch((error) => console.error(error));
@@ -63,7 +63,7 @@ const AddJobs = () => {
                                                 body: formdata,
                                                 redirect: "follow",
                                             };
-                                            fetch(`http://127.0.0.1:8000/jobs/${params.jobId}`, requestOptions)
+                                            fetch(`https://hazem1portfolio.pythonanywhere.com/jobs/${params.jobId}`, requestOptions)
                                             .then((response) => response.text())
                                             .then((result) => window.location.pathname = "/admin-dashboard-jobs")
                                             .catch((error) => console.error(error));
