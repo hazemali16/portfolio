@@ -41,7 +41,7 @@ const AddJobs = () => {
                                 const myHeaders = new Headers();
                                 myHeaders.append(
                                     "Authorization",
-                                    `Token 9e6bd9590eb65f0b34fda9ff5eda19ec08e27167`
+                                    `Token ${window.sessionStorage.getItem("token")}`
                                 );
                                         const formdata = new FormData();
                                         formdata.append("name", name);
