@@ -24,7 +24,7 @@ const Contact = () => {
                     body: formdata,
                     redirect: "follow",
                 };
-                fetch("http://127.0.0.1:8000/messages/", requestOptions)
+                fetch("https://hazem1portfolio.pythonanywhere.com/messages/", requestOptions)
                 .then((response) => response.text())
                 .then((result) => console.log(result))
                 .catch((error) => console.error(error));
