@@ -2,13 +2,13 @@
 
 
   try {
-    fetch("http://127.0.0.1:8000/hero-data/")
+    fetch("https://hazem1portfolio.pythonanywhere.com/hero-data/")
     .then((response) => response.json())
     .then((result) => {
       document.querySelector('.hero_name').innerHTML = result.results[0].name
       document.querySelector('.hero_description').innerHTML = result.results[0].description
       document.querySelector('.hero_image').src = result.results[0].image
-      fetch("http://127.0.0.1:8000/jobs-data/")
+      fetch("https://hazem1portfolio.pythonanywhere.com/jobs-data/")
       .then((response) => response.json())
       .then((jobs_result) => {
         let name = document.querySelector(".name")
