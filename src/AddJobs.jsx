@@ -54,7 +54,7 @@ const AddJobs = () => {
                                             };
                                             fetch("http://127.0.0.1:8000/jobs/", requestOptions)
                                             .then((response) => response.text())
-                                            .then((result) => window.location.pathname = "/admin-dashboard-jobs")
+                                            .then((result) => console.log(result))
                                             .catch((error) => console.error(error));
                                         } else {
                                             const requestOptions = {
