@@ -18,7 +18,7 @@ const DashBoardMsg = () => {
                         redirect: "follow",
                     };
                     fetch(
-                        `http://127.0.0.1:8000/messages/`,
+                        `https://hazem1portfolio.pythonanywhere.com/messages/`,
                         requestOptions
                     )
                         .then((response) => response.json())
