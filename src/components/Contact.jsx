@@ -26,7 +26,7 @@ const Contact = () => {
                 };
                 fetch("https://hazem1portfolio.pythonanywhere.com/messages/", requestOptions)
                 .then((response) => response.text())
-                .then((result) => console.log(result))
+                .then((result) => window.location.reload())
                 .catch((error) => console.error(error));
             }}
             action="">
