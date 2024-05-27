@@ -9,7 +9,7 @@ const AddSkills = () => {
 
     useEffect(() => {
         if (params.skillId) {
-            fetch(`http://127.0.0.1:8000/skills/${params.skillId}`,
+            fetch(`https://hazem1portfolio.pythonanywhere.com/skills/${params.skillId}`,
             {headers : {"Authorization" : `Token ${window.sessionStorage.getItem("token")}`},}
         )
             .then((response) => response.json())
@@ -99,7 +99,7 @@ const AddSkills = () => {
                                                 body: formdata,
                                                 redirect: "follow",
                                             };
-                                            fetch("http://127.0.0.1:8000/skills/", requestOptions)
+                                            fetch("https://hazem1portfolio.pythonanywhere.com/skills/", requestOptions)
                                             .then((response) => response.text())
                                             .then((result) => window.location.pathname = "/admin-dashboard-skills")
                                             .catch((error) => console.error(error));
@@ -110,7 +110,7 @@ const AddSkills = () => {
                                                 body: formdata,
                                                 redirect: "follow",
                                             };
-                                            fetch(`http://127.0.0.1:8000/skills/${params.skillId}`, requestOptions)
+                                            fetch(`https://hazem1portfolio.pythonanywhere.com/skills/${params.skillId}`, requestOptions)
                                             .then((response) => response.text())
                                             .then((result) => window.location.pathname = "/admin-dashboard-skills")
                                             .catch((error) => console.error(error));
