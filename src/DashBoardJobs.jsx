@@ -18,7 +18,7 @@ const DashBoardJobs = () => {
                         redirect: "follow",
                     };
                     fetch(
-                        `http://127.0.0.1:8000/jobs/`,
+                        `https://hazem1portfolio.pythonanywhere.com/jobs/`,
                         requestOptions
                     )
                         .then((response) => response.json())
@@ -73,7 +73,7 @@ const DashBoardJobs = () => {
                                                 redirect: "follow",
                                             };
                                             fetch(
-                                                `http://127.0.0.1:8000/jobs/${job.id}`,
+                                                `https://hazem1portfolio.pythonanywhere.com/jobs/${job.id}`,
                                                 requestOptions
                                             )
                                                 .then((response) => response.text())
