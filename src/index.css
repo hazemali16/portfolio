@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #191d28;
+    --color-secondary: #161922;
+    --heading-color: #ffcc73;
+    --pragraph-color: #ddd;
+    /* ... */
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  background-color: var(--color-primary);
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--heading-color);
+}
+body {
+  background-color: var(--color-primary);
+  min-height: 100dvh;
+  
+}
+.show-menu {
+  padding: 40px;
+  animation: showMenu 0.3s linear forwards;
+}
+.show-hero {
+  animation: showHero 1s linear forwards;
+}
+.opacity {
+  opacity: 0;
+  animation: opacity 0.7s linear infinite;
+
+}
+@keyframes showMenu {
+  form {
+    height: 0;
+  }
+  to {
+    height: 250px;
+  }
+}
+@keyframes showHero {
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+
