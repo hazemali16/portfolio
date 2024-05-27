@@ -32,7 +32,7 @@ const AddProjects = () => {
         if (params.projectId) {
             fetch(`http://127.0.0.1:8000/projects/${params.projectId}`, {
                 headers: {
-                    Authorization: "Token ad7009de198e724b98f0354298eb64a2450bbaaa",
+                    Authorization: `Token ${window.sessionStorage.getItem("token")}`,
                 },
             })
                 .then((response) => response.json())
