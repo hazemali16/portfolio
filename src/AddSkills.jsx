@@ -10,7 +10,7 @@ const AddSkills = () => {
     useEffect(() => {
         if (params.skillId) {
             fetch(`http://127.0.0.1:8000/skills/${params.skillId}`,
-            {headers : {"Authorization" : "Token ad7009de198e724b98f0354298eb64a2450bbaaa"},}
+            {headers : {"Authorization" : `Token ${window.sessionStorage.getItem("token")}`},}
         )
             .then((response) => response.json())
             .then((result) => {
