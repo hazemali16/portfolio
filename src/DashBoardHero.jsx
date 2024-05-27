@@ -4,7 +4,6 @@ import DashBoardAside from "./components/DashBoardAside";
 import DashBoardNavBar from "./components/DashBoardNavBar";
 
 const DashBoardHero = () => {
-    console.log(`Token ${window.sessionStorage.getItem("token")}`)
     useEffect(() => {
         fetch("https://hazem1portfolio.pythonanywhere.com/hero/", {
             headers: {
@@ -137,7 +136,7 @@ const DashBoardHero = () => {
                                 fetch("https://hazem1portfolio.pythonanywhere.com/hero/", {
                                     headers: {
                                         Authorization:
-                                            "Token ad7009de198e724b98f0354298eb64a2450bbaaa",
+                                            `Token ${window.sessionStorage.getItem("token")}`,
                                     },
                                 })
                                     .then((response) => response.json())
