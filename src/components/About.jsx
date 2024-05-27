@@ -4,14 +4,14 @@ import { useEffect, useState } from 'react';
 const About = () => {
     const [skills, setSkills] = useState([])
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/about-data/")
+        fetch("https://hazem1portfolio.pythonanywhere.com/about-data/")
         .then((response) => response.json())
         .then((result) => {
             document.querySelector(".about_description").innerHTML = result.results[0].description
             document.querySelector(".about_image").src = result.results[0].image
         })
         .catch((error) => console.error(error));
-        fetch("http://127.0.0.1:8000/skills-data/")
+        fetch("https://hazem1portfolio.pythonanywhere.com/skills-data/")
         .then((response) => response.json())
         .then((result) => {
             setSkills(result.results)
