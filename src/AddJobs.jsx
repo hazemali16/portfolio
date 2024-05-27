@@ -54,7 +54,7 @@ const AddJobs = () => {
                                             };
                                             fetch("https://hazem1portfolio.pythonanywhere.com/jobs/", requestOptions)
                                             .then((response) => response.text())
-                                            .then((result) => console.log(result))
+                                            .then((result) => window.location.pathname = "/admin-dashboard-jobs")
                                             .catch((error) => console.error(error));
                                         } else {
                                             const requestOptions = {
