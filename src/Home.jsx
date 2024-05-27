@@ -91,7 +91,7 @@ const Home = () => {
           behavior: "smooth", 
         })
       }
-    }, 1000);
+    }, 2000);
 
     window.onscroll = () => {
       if (window.scrollY >= 10) {
