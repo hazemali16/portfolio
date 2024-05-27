@@ -18,7 +18,7 @@ const DashBoardSkills = () => {
                         redirect: "follow",
                     };
                     fetch(
-                        `http://127.0.0.1:8000/skills/`,
+                        `https://hazem1portfolio.pythonanywhere.com/skills/`,
                         requestOptions
                     )
                         .then((response) => response.json())
@@ -75,7 +75,7 @@ const DashBoardSkills = () => {
                                                 redirect: "follow",
                                             };
                                             fetch(
-                                                `http://127.0.0.1:8000/skills/${skill.id}`,
+                                                `https://hazem1portfolio.pythonanywhere.com/skills/${skill.id}`,
                                                 requestOptions
                                             )
                                                 .then((response) => response.text())
