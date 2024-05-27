@@ -6,7 +6,7 @@ import DashBoardNavBar from "./components/DashBoardNavBar";
 
 const DashBoardAbout = () => {
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/about/", {
+        fetch("https://hazem1portfolio.pythonanywhere.com/about/", {
             headers: {
                 Authorization: "Token ad7009de198e724b98f0354298eb64a2450bbaaa",
             },
@@ -72,7 +72,7 @@ const DashBoardAbout = () => {
                                     let confirmMsg = confirm(
                                         "Are You That You Want To Delete About Section's Informations ?"
                                     );
-                                    fetch("http://127.0.0.1:8000/about/", {
+                                    fetch("https://hazem1portfolio.pythonanywhere.com/about/", {
                                         headers: {
                                             Authorization:
                                                 "Token ad7009de198e724b98f0354298eb64a2450bbaaa",
@@ -92,7 +92,7 @@ const DashBoardAbout = () => {
                                                     redirect: "follow",
                                                 };
                                                 fetch(
-                                                    `http://127.0.0.1:8000/about/${result.results[0].id}`,
+                                                    `https://hazem1portfolio.pythonanywhere.com/about/${result.results[0].id}`,
                                                     requestOptions
                                                 )
                                                     .then((response) => response.text())
@@ -133,7 +133,7 @@ const DashBoardAbout = () => {
                                     `Token ${window.sessionStorage.getItem("token")}`
                                 );
 
-                                fetch("http://127.0.0.1:8000/about/", {
+                                fetch("https://hazem1portfolio.pythonanywhere.com/about/", {
                                     headers: {
                                         Authorization:
                                             "Token ad7009de198e724b98f0354298eb64a2450bbaaa",
@@ -154,7 +154,7 @@ const DashBoardAbout = () => {
                                                 body: formdata,
                                                 redirect: "follow",
                                             };
-                                            fetch("http://127.0.0.1:8000/about/", requestOptions)
+                                            fetch("https://hazem1portfolio.pythonanywhere.com/about/", requestOptions)
                                                 .then((response) => response.text())
                                                 .then((result) => window.location.reload())
                                                 .catch((error) => console.error(error));
@@ -171,7 +171,7 @@ const DashBoardAbout = () => {
                                                 redirect: "follow",
                                             };
                                             fetch(
-                                                `http://127.0.0.1:8000/about/${result.results[0].id}`,
+                                                `https://hazem1portfolio.pythonanywhere.com/about/${result.results[0].id}`,
                                                 requestOptions
                                             )
                                                 .then((response) => response.text())
