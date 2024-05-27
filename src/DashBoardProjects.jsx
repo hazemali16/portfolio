@@ -19,7 +19,7 @@ const DashBoardProjects = () => {
                         redirect: "follow",
                     };
                     fetch(
-                        `http://127.0.0.1:8000/projects/`,
+                        `https://hazem1portfolio.pythonanywhere.com/projects/`,
                         requestOptions
                     )
                         .then((response) => response.json())
@@ -79,7 +79,7 @@ const DashBoardProjects = () => {
                                                 redirect: "follow",
                                             };
                                             fetch(
-                                                `http://127.0.0.1:8000/projects/${project.id}`,
+                                                `https://hazem1portfolio.pythonanywhere.com/projects/${project.id}`,
                                                 requestOptions
                                             )
                                                 .then((response) => response.text())
