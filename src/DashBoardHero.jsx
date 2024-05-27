@@ -5,7 +5,7 @@ import DashBoardNavBar from "./components/DashBoardNavBar";
 
 const DashBoardHero = () => {
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/hero/", {
+        fetch("https://hazem1portfolio.pythonanywhere.com/hero/", {
             headers: {
                 Authorization: `Token ${window.sessionStorage.getItem("token")}`,
             },
@@ -72,7 +72,7 @@ const DashBoardHero = () => {
                                     let confirmMsg = confirm(
                                         "Are You That You Want To Delete Hero Section's Informations ?"
                                     );
-                                    fetch("http://127.0.0.1:8000/hero/", {
+                                    fetch("https://hazem1portfolio.pythonanywhere.com/hero/", {
                                         headers: {
                                             Authorization: `Token ${window.sessionStorage.getItem("token")}`,
                                         },
@@ -91,7 +91,7 @@ const DashBoardHero = () => {
                                                     redirect: "follow",
                                                 };
                                                 fetch(
-                                                    `http://127.0.0.1:8000/hero/${result.results[0].id}`,
+                                                    `https://hazem1portfolio.pythonanywhere.com/hero/${result.results[0].id}`,
                                                     requestOptions
                                                 )
                                                     .then((response) => response.text())
@@ -133,7 +133,7 @@ const DashBoardHero = () => {
                                     `Token ${window.sessionStorage.getItem("token")}`
                                 );
 
-                                fetch("http://127.0.0.1:8000/hero/", {
+                                fetch("https://hazem1portfolio.pythonanywhere.com/hero/", {
                                     headers: {
                                         Authorization:
                                             "Token ad7009de198e724b98f0354298eb64a2450bbaaa",
@@ -155,7 +155,7 @@ const DashBoardHero = () => {
                                                 body: formdata,
                                                 redirect: "follow",
                                             };
-                                            fetch("http://127.0.0.1:8000/hero/", requestOptions)
+                                            fetch("https://hazem1portfolio.pythonanywhere.com/hero/", requestOptions)
                                                 .then((response) => response.text())
                                                 .then((result) => window.location.reload())
                                                 .catch((error) => console.error(error));
@@ -173,7 +173,7 @@ const DashBoardHero = () => {
                                                 redirect: "follow",
                                             };
                                             fetch(
-                                                `http://127.0.0.1:8000/hero/${result.results[0].id}`,
+                                                `https://hazem1portfolio.pythonanywhere.com/hero/${result.results[0].id}`,
                                                 requestOptions
                                             )
                                                 .then((response) => response.text())
