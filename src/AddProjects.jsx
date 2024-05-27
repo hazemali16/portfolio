@@ -21,7 +21,7 @@ const AddProjects = () => {
             redirect: "follow",
         };
         fetch(
-            `http://127.0.0.1:8000/skills/`,
+            `https://hazem1portfolio.pythonanywhere.com/skills/`,
             requestOptions
         )
             .then((response) => response.json())
@@ -30,7 +30,7 @@ const AddProjects = () => {
             })
             .catch((error) => console.error(error));
         if (params.projectId) {
-            fetch(`http://127.0.0.1:8000/projects/${params.projectId}`, {
+            fetch(`https://hazem1portfolio.pythonanywhere.com/projects/${params.projectId}`, {
                 headers: {
                     Authorization: `Token ${window.sessionStorage.getItem("token")}`,
                 },
@@ -141,7 +141,7 @@ const AddProjects = () => {
                                         body: formdata,
                                         redirect: "follow",
                                     };
-                                    fetch("http://127.0.0.1:8000/projects/", requestOptions)
+                                    fetch("https://hazem1portfolio.pythonanywhere.com/projects/", requestOptions)
                                         .then((response) => response.text())
                                         .then(
                                             (result) =>
@@ -156,7 +156,7 @@ const AddProjects = () => {
                                         redirect: "follow",
                                     };
                                     fetch(
-                                        `http://127.0.0.1:8000/projects/${params.projectId}`,
+                                        `https://hazem1portfolio.pythonanywhere.com/projects/${params.projectId}`,
                                         requestOptions
                                     )
                                         .then((response) => response.text())
