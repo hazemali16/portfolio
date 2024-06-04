@@ -5,19 +5,19 @@ import { useEffect, useState } from 'react';
 const Portfolio = () => {
   const [projects, setProjects] = useState([])
   const [skills, setSkills] = useState([])
-  let desktopMenu = document.querySelector(".desktop-menu")
-  let mobileNavbar = document.querySelector(".mobile-navbar")
-  let checkPorfolio = document.querySelector(".check-porfolio")
-  let goUp = document.querySelector(".go-up")
-  let about = document.querySelector(".about")
-  let portfolio = document.querySelector(".portfolio")
-  let contact = document.querySelector(".contact")
 
   // let skills = new Set()
   useEffect(() => {
     fetch("https://hazem1portfolio.pythonanywhere.com/projects-data/")
     .then((response) => response.json())
     .then((projects_result) => {
+        let desktopMenu = document.querySelector(".desktop-menu")
+  let mobileNavbar = document.querySelector(".mobile-navbar")
+  let checkPorfolio = document.querySelector(".check-porfolio")
+  let goUp = document.querySelector(".go-up")
+  let about = document.querySelector(".about")
+  let portfolio = document.querySelector(".portfolio")
+  let contact = document.querySelector(".contact")
       setProjects(projects_result.results);
       setTimeout(() => {
         checkPorfolio.onclick = () => {
