@@ -119,7 +119,7 @@ const Portfolio = () => {
       {projects.map((project) => {
         return(
           <div className="shadow-lg rounded-lg translate-y-10 opacity-0 duration-300" key={project.id}>
-          <div className="relative h-[300px]">
+          <div className="relative h-[300px] overflow-hidden">
             <img src={project.image} alt="project" className='w-full rounded-t-lg' />
             <a href={project.link} target='_blank' rel="noreferrer" className="text-[var(--color-primary)] duration-300 border border-[var(--heading-color)] hover:text-[var(--heading-color)] hover:bg-[var(--color-primary)] w-8 h-8 absolute top-2 right-2 bg-[var(--heading-color)] flex justify-center items-center rounded shadow-2xl">
             <i className="fa-solid fa-eye"></i>
