@@ -15,7 +15,7 @@ const Portfolio = () => {
 
   // let skills = new Set()
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/projects-data/")
+    fetch("https://hazem1portfolio.pythonanywhere.com/projects-data/")
     .then((response) => response.json())
     .then((projects_result) => {
       setProjects(projects_result.results);
@@ -105,7 +105,7 @@ const Portfolio = () => {
       }, 1000);
     })
     .catch((error) => console.error(error));
-    fetch("http://127.0.0.1:8000/skills-data/")
+    fetch("https://hazem1portfolio.pythonanywhere.com/skills-data/")
     .then((response) => response.json())
     .then((result) => {  setSkills(result.results)  })
     .catch((error) => console.error(error))
