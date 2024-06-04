@@ -11,87 +11,11 @@ const Home = () => {
     let goUp = document.querySelector(".go-up")
     let navbar = document.querySelector(".navbar")
     let desktopMenu = document.querySelector(".desktop-menu")
-    let mobileNavbar = document.querySelector(".mobile-navbar")
     let about = document.querySelector(".about")
     let portfolio = document.querySelector(".portfolio")
     let contact = document.querySelector(".contact")
-    setTimeout(() => {
-      let scrollWraper = document.querySelector(".scroll-wraper")
-      let height = scrollWraper.getBoundingClientRect().height 
-      let speed = 0.05
-      let offset = 0
-      document.body.style.height = Math.floor(height) + "px"
-      function smoothScroll() {
-        offset += (window.scrollY - offset) * speed
-        var scroll = "translateY(-" + offset + "px) translateZ(0)";
-        scrollWraper.style.transform = scroll;
-        let callScroll = requestAnimationFrame(smoothScroll)
-      }
-      smoothScroll()
-      goUp.onclick = () => {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-      desktopMenu.children[0].onclick = () => {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-      desktopMenu.children[1].onclick = () => {
-        window.scrollTo({
-          top: about.offsetTop,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-          desktopMenu.children[2].onclick = () => {
-        window.scrollTo({
-          top: portfolio.offsetTop,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-      desktopMenu.children[3].onclick = () => {
-        window.scrollTo({
-          top: contact.offsetTop,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-      mobileNavbar.children[0].onclick = () => {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-      mobileNavbar.children[1].onclick = () => {
-        window.scrollTo({
-          top: about.offsetTop,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-          mobileNavbar.children[2].onclick = () => {
-        window.scrollTo({
-          top: portfolio.offsetTop,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-      mobileNavbar.children[3].onclick = () => {
-        window.scrollTo({
-          top: contact.offsetTop,
-          left: 0,
-          behavior: "smooth", 
-        })
-      }
-    }, 3000);
+    
+
 
     window.onscroll = () => {
       if (window.scrollY >= 10) {
