@@ -13,7 +13,6 @@ import AddSkills from './AddSkills';
 import DashBoardProjects from './DashBoardProjects';
 import AddProjects from './AddProjects';
 import DashBoardMsg from './DashBoardMsg';
-import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -33,7 +32,6 @@ function App() {
       <Route path="/admin-dashboard-projects/:projectId" element={<AddProjects />}></Route>
       <Route path="/admin-dashboard-add-project" element={<AddProjects />}></Route>
       <Route path="/admin-dashboard-messages" element={<DashBoardMsg />}></Route>
-      <Analytics />
     </Routes>
   );
 }
